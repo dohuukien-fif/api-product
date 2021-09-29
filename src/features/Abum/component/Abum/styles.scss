@@ -1,0 +1,17 @@
+.abum{
+        display: block;
+        position: relative;
+      
+        &-image{
+            width: 190px;
+            height: 200px;
+         border-radius: 5px;
+         
+        
+        }
+        &-title{
+            margin-top: 20px;
+           
+        }
+    
+}

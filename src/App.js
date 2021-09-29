@@ -1,10 +1,11 @@
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 import Todofeatures from "./features/todo";
+import AlbumFeature from "./features/Abum";
 function App() {
   return (
     <div className="App">
-      <Todofeatures />
+      <AlbumFeature />
     </div>
   );
 }

@@ -1,0 +1,11 @@
+.abumList{
+    display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+    & li{
+        list-style: none;
+        margin-left: 50px;
+        position: relative;
+       
+    }
+}
