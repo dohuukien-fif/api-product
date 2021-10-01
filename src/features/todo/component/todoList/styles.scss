@@ -1,0 +1,13 @@
+.todo{
+margin-left: 100px;  
+    & > li{
+        font-size: 15px;
+        list-style: none;
+        &.complete{
+            color: red;
+            font-style: italic;
+            text-decoration: line-through;
+        }
+    }
+    
+}
