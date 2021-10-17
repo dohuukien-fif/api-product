@@ -26,11 +26,12 @@ function Todofeatures(props) {
   const location = useLocation();
   const history = useHistory();
   const match = useRouteMatch();
-
+  console.log('location', location);
+  console.log('history', history);
+  console.log('match', match);
   const [todoLists, settodoLists] = useState(todoList);
   const [FiterTodo, setFiterTodo] = useState();
   //toget active TodoList
-
 
   //togert status
   const handoTodoClick = (todos, idx) => {
@@ -53,15 +54,15 @@ function Todofeatures(props) {
   const hanleShowAll = () => {
     const queryParam = { status: 'all' };
     history.push({
-      pathname: match.path,
+      pathname: location.pathname,
       search: queryString.stringify(queryParam),
     });
   };
-//status complete
+  //status complete
   const hanleShowComplete = () => {
     const queryParam = { status: 'complete' };
     history.push({
-      pathname: match.path,
+      pathname: location.pathname,
       search: queryString.stringify(queryParam),
     });
   };
@@ -69,7 +70,7 @@ function Todofeatures(props) {
   const hanleShowNew = () => {
     const queryParam = { status: 'pending' };
     history.push({
-      pathname: match.path,
+      pathname: location.pathname,
       search: queryString.stringify(queryParam),
     });
   };

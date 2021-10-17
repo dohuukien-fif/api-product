@@ -9,7 +9,13 @@ import NotFound from './component/NotFound/index';
 import Categories from './api/categoriesApi';
 import productApi from './api/productApi';
 import Counter from './features/couter/index';
+import Headers from './component/Header/index';
+import { useSnackbar } from 'notistack';
+import ProducFeatures from 'features/product';
+import CartFeture from 'features/cart';
+
 function App() {
+  const { enqueueSnackbar } = useSnackbar();
   useEffect(() => {
     const fetchApi = async () => {
       try {
@@ -20,15 +26,17 @@ function App() {
     };
     fetchApi();
   }, []);
+
   return (
     <div className="App">
-      dsadasda
-      <Link to="/todo">Todo</Link>
-      <Link to="/bum">Abum</Link>
+      <Headers />
+
       <Switch>
-        <Route exact path="/todo" component={Todofeatures} />
+        <Route exact path="/" component={Counter} />
+        <Route path="/todo" component={Todofeatures} />
         <Route path="/abum" component={AlbumFeature} />
-        <Route path="/couter" component={Counter} />
+        <Route path="/products" component={ProducFeatures} />
+        <Route path="/cart" component={CartFeture} />
         <Route component={NotFound} />
       </Switch>
     </div>
